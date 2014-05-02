@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Injection Demo</title>
+    <script src="js/lib/angular.js"></script>
+    <script src="js/app/app.js"></script>
+    <style>
+        .error {color: #f66;}
+    </style>
+</head>
+    <body ng-app="DemoApp">
+
+        <div ng-controller="demoController">
+            <h1>Injection Tutorial</h1>
+
+            <p ng-cloak ng-show="error" class="error">{{errorString}}</p>
+
+            <div>
+
+                <input type="number" ng-model="num1" />
+                +
+                <input type="number" ng-model="num2" />
+
+            </div>
+
+            <div>
+
+                <button ng-click="crunchNumbers()">Crunch Numbers</button>
+
+            </div>
+
+            <div>
+                <input type="number" ng-model="num3" />
+            </div>
+        </div>
+
+    </body>
+</html>
