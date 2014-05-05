@@ -1,6 +1,6 @@
-var serviceInjection = angular.module('serviceInjectionApp', []);
+var serviceInjectionApp = angular.module('serviceInjectionApp', []);
 
-serviceInjection.controller('ctrl', function($scope, NumberCruncher){
+serviceInjectionApp.controller('ctrl', function($scope, NumberCruncher){
     $scope.errorString = "ERROR";
 
     $scope.crunchNumbers = function(){
@@ -10,7 +10,7 @@ serviceInjection.controller('ctrl', function($scope, NumberCruncher){
     }
 });
 
-serviceInjection.service('NumberCruncher', function(){
+serviceInjectionApp.service('NumberCruncher', function(){
     var numberCruncher = {
         crunch: function(num1, num2){
             if (typeof num1 !== 'number' || typeof num2 !== 'number') {
