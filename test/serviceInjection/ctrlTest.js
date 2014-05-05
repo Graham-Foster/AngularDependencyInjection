@@ -1,9 +1,9 @@
-describe('DemoController', function(){
+describe('serviceInjectionApp ctrl', function(){
     var fixture,
         scope,
         mockNumberCruncher;
 
-    beforeEach(module('DemoApp', function($provide){
+    beforeEach(module('serviceInjectionApp', function($provide){
 
     }));
 
@@ -11,15 +11,15 @@ describe('DemoController', function(){
         scope = $rootScope.$new();
         mockNumberCruncher = _NumberCruncher_;
 
-        fixture = $controller('demoController', {
+        fixture = $controller('ctrl', {
             $scope: scope,
             NumberCruncher: _NumberCruncher_
-        })
+        });
     }));
 
     it('should provide and errorString', function(){
         expect(scope.errorString).not.toBeNull();
-    })
+    });
 
     it('crunchNumbers should delegate to service', function(){
         //setup
@@ -37,5 +37,5 @@ describe('DemoController', function(){
         expect(scope.num3).toBe(result);
         expect(scope.error).toBeFalsy();
         expect(mockNumberCruncher.crunch).toHaveBeenCalled();
-    })
+    });
 });

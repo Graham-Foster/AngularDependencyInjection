@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/lib/angular.js"></script>
+    <script src="js/injectionTypes/injectionTypesApp.js"></script>
+    <style>
+        .border-box{ border: 1px solid black; margin: 20px; padding:10px; }
+        .code{ font-family: courier; }
+    </style>
+</head>
+<body ng-app="injectionTypesApp">
+    <h1>Injection Types</h1>
+    <div ng-controller="ctrl1" class="border-box">
+        <h2>Implicit Injection</h2>
+
+        <h3>{{msg}}</h3>
+        <pre class="code">{{details}}</pre>
+    </div>
+
+    <div ng-controller="ctrl2" class="border-box">
+        <h2>$inject Property Injection</h2>
+
+        <h3>{{msg}}</h3>
+        <pre class="code">{{details}}</pre>
+    </div>
+
+    <div ng-controller="ctrl3" class="border-box">
+        <h2>Inline Array Injection</h2>
+
+        <h3>{{msg}}</h3>
+        <pre class="code">{{details}}</pre>
+    </div>
+
+    <a style="float: right;" href="serviceInjection.html">Service Injection</a>
+</body>
+</html>

@@ -16878,7 +16878,7 @@ var NgModelController = ['$scope', '$exceptionHandler', '$attrs', '$element', '$
  *
  *  - {@link https://github.com/angular/angular.js/wiki/Understanding-Scopes}
  *
- * For basic examples, how to use `ngModel`, see:
+ * For serviceInjection examples, how to use `ngModel`, see:
  *
  *  - {@link ng.directive:input input}
  *    - {@link ng.directive:input.text text}
@@ -17442,7 +17442,7 @@ function classDirective(name, selector) {
  *   names of the properties whose values are truthy will be added as css classes to the
  *   element.
  *
- * @example Example that demonstrates basic bindings via ngClass directive.
+ * @example Example that demonstrates serviceInjection bindings via ngClass directive.
    <example>
      <file name="index.html">
        <p ng-class="{strike: deleted, bold: important, red: error}">Map Syntax Example</p>

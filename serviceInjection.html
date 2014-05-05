@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Injection Demo</title>
     <script src="js/lib/angular.js"></script>
-    <script src="js/app/app.js"></script>
+    <script src="js/serviceInjection/serviceInjection.js"></script>
     <style>
         .error {color: #f66;}
     </style>
 </head>
-    <body ng-app="DemoApp">
+    <body ng-app="serviceInjection">
 
-        <div ng-controller="demoController">
+        <div ng-controller="ctrl">
             <h1>Injection Tutorial</h1>
 
             <p ng-cloak ng-show="error" class="error">{{errorString}}</p>
@@ -34,5 +33,8 @@
             </div>
         </div>
 
+    <br/><br/><br/>
+    <a href="injectionTypes.html">Back to Injection Types</a>
+    <a style="float: right;" href="otherInjection.html">Other Injection Types</a>
     </body>
 </html>

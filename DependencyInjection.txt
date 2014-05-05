@@ -1,0 +1,19 @@
+-Dependency Injection
+
+-3 types
+	-Implicit
+		app.controller('ctrl1', function($scope){})
+	-$inject property annotation 
+		var ctrl2 = app.controller('ctrl2', function(myScope){});
+		ctrl2.$inject = ['$scope'];
+	-Inline array declaration
+		app.controller('ctrl3', ['$scope', function(myScope){}]);
+
+-Service Injection
+	-Singletons
+	-Testing
+	-Testing anti-pattern
+
+-Other places to do Injection
+	-filter git commits for angularjs
+		https://api.github.com/repos/angular/angular.js/commits

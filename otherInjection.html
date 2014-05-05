@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/lib/angular.js"></script>
+    <script src="js/otherInjection/otherInjectionApp.js"></script>
+    <style>
+        td{ margin: 5px; border: 1px solid #aaa; }
+        .expert{ color: green; }
+    </style>
+</head>
+<body ng-app="otherInjectionApp">
+    <h1>Other Injection Places</h1>
+    <div ng-controller="ctrl">
+        <h2>Angular JS Github Commits</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Author</th>
+                <th>Message</th>
+                <th>Expert?</th>
+            </tr>
+            <tr ng-repeat="commit in commits">
+                <td>{{commit.commit.committer.date | date : 'shortDate'}}</td>
+                <td>{{commit.commit.author.name}}</td>
+                <td>{{commit.commit.message}}</td>
+                <td>{{commit | checkExpert}}</td>
+            </tr>
+        </table>
+    </div>
+    <br/><br/><br/>
+    <a href="serviceInjection.html">Back to Service Injection</a>
+</body>
+</html>

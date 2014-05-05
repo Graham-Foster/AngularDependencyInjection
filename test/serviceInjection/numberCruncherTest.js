@@ -1,7 +1,7 @@
-describe('NumberCruncherSpec', function() {
+describe('serviceInjectionApp NumberCruncherSpec', function() {
     var fixture;
 
-    beforeEach(module('DemoApp', function($provide){
+    beforeEach(module('serviceInjectionApp', function($provide){
 
     }));
 
