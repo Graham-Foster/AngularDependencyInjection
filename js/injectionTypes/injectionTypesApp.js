@@ -1,16 +1,16 @@
 var injectionTypesApp = angular.module('injectionTypesApp', []);
 
-var ctrl1 = injectionTypesApp.controller('ctrl1', function($scope){
+injectionTypesApp.controller('ctrl1', function($scope){
     $scope.msg = 'Controller1 Setup Success!';
 
-    $scope.details = 'var ctrl1 = injectionTypesApp.controller(\'ctrl1\', function($scope){...});'
+    $scope.details = 'injectionTypesApp.controller(\'ctrl1\', function($scope){...});'
 });
 
 
 var ctrl2 = function(a){
     a.msg = 'Controller2 Setup Success!';
 
-    a.details = 'var ctrl2 = function(renamedScope){...}); \nctrl2.$inject = [\'$scope\'];';
+    a.details = 'var c = function(a){...}); \nc.$inject = [\'$scope\'];';
 };
 ctrl2.$inject = ['$scope'];
 
