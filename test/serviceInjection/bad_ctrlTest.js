@@ -17,7 +17,7 @@ describe('serviceInjectionApp ctrl', function(){
         });
     }));
 
-    it('should provide and errorString', function(){
+    it('should provide an errorString', function(){
         expect(scope.errorString).not.toBeNull();
     });
 
