@@ -2,6 +2,7 @@ var serviceInjectionApp = angular.module('serviceInjectionApp', []);
 
 serviceInjectionApp.controller('ctrl', function($scope, NumberCruncher){
     $scope.errorString = "ERROR";
+    $scope.title = "Service Injection";
 
     $scope.crunchNumbers = function(){
         $scope.num3 = NumberCruncher.crunch($scope.num1, $scope.num2);
